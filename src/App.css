@@ -39,7 +39,7 @@ body, html {
   width: 100%;
   height: 60px;
   position: relative;
-  bottom: 0px;
+
   
 }
 .logo{
@@ -60,7 +60,7 @@ body, html {
   background-color: #ACE1AF;
   height: 600px;
   position: relative;
-  top: 50px;
+  bottom: 15%;
   margin: 0 auto;
   box-shadow: 5px 5px 5px 5px #004830;
   border: #004830;
@@ -133,7 +133,7 @@ body, html {
 
 .OFI{
    position: relative;
-  top: 50px;
+   
   color: #004830;
    text-align: center;
   
@@ -192,6 +192,8 @@ body, html {
   text-align: center;
   height: 340px;
   color: #ACE1AF;
+  position: relative;
+  bottom: 350px;
 }
 
 .roomPic{
@@ -256,6 +258,8 @@ position: relative;
   text-align: center;
   height: 340px;
   color: #ACE1AF;
+  position: relative;
+  bottom: 350px;
 }
 
 .oroomName{
@@ -294,9 +298,10 @@ position: relative;
   color: #004830;
   text-align: center;
   font-family: "Imperial Script", "cursive";
+  position: relative;
+  bottom: 300px;
   
 }
-
 .faciContainer{
   box-shadow: 5px 5px 5px 5px #004830;
   border: #004830;
@@ -344,9 +349,9 @@ color: #004830;
 .bottomNavheader{
   background-color: #004830;
   width: 100%;
-  height: 450px;
+  height: 300px;
   position: relative;
-  top: 50%;
+  top: 132%;
   display: flex;
   gap: 60px;
 }
@@ -375,4 +380,72 @@ color: #004830;
   font-size: 20px;
   position: relative;
   bottom: 30px;
+}
+
+.sighninH{
+  position: relative;
+  top: 300px;
+  color: #004830;
+  text-align: center;
+}
+
+.signinBtn{
+  width: 100px;
+  position: relative;
+  left: 350px;
+
+}
+
+.signinBtn:hover{
+  background-color: #ACE1AF;
+  border: 3px solid #004830;
+  color: #004830;
+
+}
+.FPassLink{
+  position:relative;
+  bottom: 60px;
+  left: 20px;
+  font-size: medium;
+  color: #004830;
+  width: fit-content;
+}
+
+.FPassLink:hover{
+  color: white;
+}
+
+.HotelLogo {
+  position: relative;
+  bottom: 800px;
+  left: 100px;
+  width: 300px;
+}
+.HotelLogoSignin {
+
+  position: relative;
+  bottom: 670px;
+  left: 100px;
+  width: 300px;
+}
+.newAccLink{
+    position:relative;
+  bottom: 80px;
+  left: 160px;
+  font-size: medium;
+  color: #004830;
+  width: fit-content;
+}
+
+.newAccLink:hover{
+  color: white;
+}
+
+.intruction{
+  position:relative;
+  bottom: 170px;
+  left: 30px;
+  font-size: medium;
+  color: #004830;
+  width: fit-content;
 }

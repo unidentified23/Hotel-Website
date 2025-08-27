@@ -46,3 +46,28 @@ button:hover {
   background: #ACE1AF;
   color: #004830;
 }
+
+/*------Signin Page----*/
+
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: 400px;
+  
+  width: 500px;
+
+
+}
+.inputContainer input{
+  height: 20px;
+   border: none;
+  border-bottom: 3px solid #004830;
+  background-color: #ACE1AF;
+  font-size: large;
+  color: #004830;
+  
+
+}
