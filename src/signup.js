@@ -40,12 +40,12 @@ function Signup() {
     const errorCode = error.code;
     const errorMessage = error.message;
     alert("Signup error:"+ errorCode+" "+ errorMessage)
-    // ..
+    
   };
-     // this should match your <Route path="/nextpage" />
+     
   };
    const SigninPage = () => {
-    navigate("/signin"); // this should match your <Route path="/nextpage" />
+    navigate("/signin"); 
   };
 
 

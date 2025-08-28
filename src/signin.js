@@ -27,13 +27,13 @@ function Signin() {
 }
 
       };
-     // this should match your <Route path="/nextpage" />
+     
   };
      const SignupPage = () => {
-    navigate("/signup"); // this should match your <Route path="/nextpage" />
+    navigate("/signup"); 
   };
    const ForgotPass = () => {
-    navigate("/forgotpass"); // this should match your <Route path="/nextpage" />
+    navigate("/forgotpass"); 
   };
 
   return (
