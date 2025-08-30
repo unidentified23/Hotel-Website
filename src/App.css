@@ -21,8 +21,36 @@ body, html {
   padding: 0;
   height: 100%;
 }
+.loginsign{
+  background-color:#ACE1AF;
+  width:40px;
+  border-radius: 70px;
+  position: relative;
+  bottom:25px;
+  left: 97%;
+  text-align: center;
+}
 
-
+.popupContainer{
+  background-color: #ACE1AF;
+  width: 10%;
+  height: 100px;
+  position: relative;
+  left: 90%;
+  bottom: 72px;
+  border: 2px solid #004830;
+}
+.closepopup{
+  position: relative;
+  bottom: 10px;
+  background-color: #ACE1AF;
+  color: #004830;
+}
+.popupFunction{
+  position: relative;
+  bottom: 70px;
+  left: 20px;
+}
 .navbarContainer{
   position: fixed;
   height: 40%;

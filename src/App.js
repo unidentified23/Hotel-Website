@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./routes";
-
+import { AuthProvider } from "./authcontext";
 function App() {
   
   return (
@@ -9,7 +9,10 @@ function App() {
       
         
       <BrowserRouter>
-      <Routes/> 
+      <AuthProvider>
+      <Routes/>
+      </AuthProvider>
+       
       </BrowserRouter>
       
     </div>

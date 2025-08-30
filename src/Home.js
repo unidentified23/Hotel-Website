@@ -1,4 +1,3 @@
-import React from "react";
 import Slideshow from "./slideshow";
 import hpic from "./images/front.jpg";
 import resturant from "./images/resturant.png";
@@ -9,7 +8,14 @@ import gym from "./images/output-onlinepngtools(2).png";
 import roomServ from "./images/room service.png";
 
 
+
 function Home() {
+
+  
+   
+
+
+
   return (
     <div className="faciheader" >
       <div className="HContainer">
@@ -71,6 +77,7 @@ function Home() {
       </div>
 
       <Slideshow />
+      
 
       
     </div>
