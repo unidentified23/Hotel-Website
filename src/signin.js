@@ -7,9 +7,12 @@ import { auth } from "./firebaseconfig";
 function Signin() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
   const nextPage = async () => {
+     if (loading) return;
+    setLoading(true);
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,

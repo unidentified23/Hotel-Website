@@ -7,6 +7,7 @@ import BottomNavbar from "./bottomNavbar";
 import Signin from "./signin";
 import Signup from "./signup";
 import Forgotpass from "./forgotpass";
+import Admin from "./admin";
 
 function AppRoutes() {
     const location = useLocation();
@@ -22,6 +23,7 @@ function AppRoutes() {
             <Route path="/bottomNavbar" element={<BottomNavbar />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgotpass" element={<Forgotpass />} />
+            <Route path="/admin" element={<Admin />} />
            
           </Routes>
 

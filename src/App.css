@@ -34,22 +34,31 @@ body, html {
 .popupContainer{
   background-color: #ACE1AF;
   width: 10%;
-  height: 100px;
+  height: 200px;
   position: relative;
-  left: 90%;
-  bottom: 72px;
+  left: 89%;
+  bottom: 69px;
   border: 2px solid #004830;
+  color: #004830;
+  font-size: medium;
+  text-align: center;
 }
 .closepopup{
   position: relative;
-  bottom: 10px;
+  bottom: 0px;
+  right: 80px;
   background-color: #ACE1AF;
   color: #004830;
 }
 .popupFunction{
   position: relative;
-  bottom: 70px;
-  left: 20px;
+  bottom: 20px;
+
+}
+.signBtn{
+  position: relative;
+  top: 30px;
+  
 }
 .navbarContainer{
   position: fixed;
@@ -476,4 +485,9 @@ color: #004830;
   font-size: medium;
   color: #004830;
   width: fit-content;
+}
+
+.inputCont{
+  display: flex;
+  flex-direction: column;
 }

@@ -1,19 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from "./images/h-logo.png"
 import { Link } from 'react-router-dom';
 import { useAuth } from "./authcontext";
 import { useNavigate } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "./firebaseconfig";
 
 
 
 function Navbar() {
   const [showpopup, setShowpopup]= useState(false);
     const { user, logout } = useAuth();
+    const [userData, setUserData] = useState(null);
     const navigate = useNavigate();
    const openPopup = () => setShowpopup(true);
    const closePopup = () => setShowpopup(false);
    console.log("user mail is:",user)
 
+    useEffect(() => {
+    const fetchUserData = async () => {
+      if (user) {
+        try {
+    
+          const docRef = doc(db, "users", user.uid);
+          const docSnap = await getDoc(docRef);
+
+          if (docSnap.exists()) {
+            console.log("User data:", docSnap.data());
+            const userData = docSnap.data();
+            setUserData(userData);
+          } else {
+            console.log("No such document!");
+          }
+        } catch (err) {
+          console.error("Error fetching user data:", err);
+        }
+      }
+    };
+
+    fetchUserData();
+  }, [user]); 
 
  
   return (
@@ -32,14 +58,15 @@ function Navbar() {
           <div  className='popupFunction'>
       {user ? (
         <>
-          <p>✅{user.email}</p>
+          <p>{user.email}</p>
+          <p>Hello {userData.firstname}</p>
           
-          <button onClick={logout}>Logout</button>
+          <button  className='signBtn' onClick={logout} >Logout</button>
         </>
       ) : (
         <>
           <p>❌ Not logged in</p>
-          <button onClick={() => navigate("./signin") }>
+          <button className='signBtn' onClick={() => navigate("./signin") }>
             Login
           </button>
         </>
