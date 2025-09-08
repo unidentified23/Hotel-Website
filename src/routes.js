@@ -13,7 +13,7 @@ function AppRoutes() {
     const location = useLocation();
   return (
     <div>
-        {!["/signin", "/signup", "/forgotpass"].includes(location.pathname) && (<><Navbar /> <BottomNavbar/> </> )}
+        {!["/signin", "/signup", "/forgotpass", "/admin"].includes(location.pathname) && (<><Navbar /> <BottomNavbar/> </> )}
          
            <Routes>
             <Route path="/" element={<Home />} />

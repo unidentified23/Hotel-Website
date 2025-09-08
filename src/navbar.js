@@ -17,6 +17,14 @@ function Navbar() {
    const closePopup = () => setShowpopup(false);
    console.log("user mail is:",user)
 
+   function toSignin(){
+    closePopup();
+    navigate("/signin");
+    console.log("Navigating to signin...");
+    
+
+   }
+
     useEffect(() => {
     const fetchUserData = async () => {
       if (user) {
@@ -66,7 +74,7 @@ function Navbar() {
       ) : (
         <>
           <p>❌ Not logged in</p>
-          <button className='signBtn' onClick={() => navigate("./signin") }>
+          <button className='signBtn' onClick={toSignin} >
             Login
           </button>
         </>

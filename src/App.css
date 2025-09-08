@@ -42,6 +42,7 @@ body, html {
   color: #004830;
   font-size: medium;
   text-align: center;
+  z-index: 9999; 
 }
 .closepopup{
   position: relative;
@@ -61,7 +62,6 @@ body, html {
   
 }
 .navbarContainer{
-  position: fixed;
   height: 40%;
   background: #004830;
   display: flex;
@@ -243,15 +243,15 @@ body, html {
 
 .roomName{
 position: relative;
-  top: 199px;
-  right: 75px;
+  top: 208px;
+  right:125px;
   
 }
 
 .roomPrice{
 position: relative;
   bottom: 110px;
-  left: 90px;
+  left: 130px;
 }
 
 .iconContainer{
@@ -261,7 +261,7 @@ position: relative;
   display: flex;
   gap: 20px;
   position: relative;
-  bottom: 160px;
+  bottom: 180px;
   left: 15px;
 }
 
@@ -275,7 +275,7 @@ position: relative;
 .NoOfBeds{
   color: #004830;
   position: relative;
-  bottom: 30px;
+  bottom: 36px;
   left: 35px;
 }
 
@@ -301,8 +301,8 @@ position: relative;
 
 .oroomName{
   position: relative;
-  top: 199px;
-  right: 75px;
+  top: 207px;
+  right: 115px;
 }
 
 .oroomPic{
@@ -316,7 +316,7 @@ position: relative;
 .oroomPrice{
   position: relative;
   bottom: 110px;
-  left: 90px;
+  left: 130px;
 }
 
 .iconContainer2{
@@ -326,7 +326,7 @@ position: relative;
   display: flex;
   gap: 20px;
   position: relative;
-  bottom: 170px;
+  bottom: 180px;
   left: 20px;
 }
 
@@ -490,4 +490,14 @@ color: #004830;
 .inputCont{
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.AdinInput{
+  height: 20px;
+   border: none;
+  border-bottom: 3px solid #004830;
+  background-color: #ACE1AF;
+  font-size: large;
+  color: #004830;
 }

@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
-import Routes from "./routes";
+import AppRoutes from "./routes";
 import { AuthProvider } from "./authcontext";
 function App() {
   
@@ -10,7 +10,7 @@ function App() {
         
       <BrowserRouter>
       <AuthProvider>
-      <Routes/>
+      <AppRoutes/>
       </AuthProvider>
        
       </BrowserRouter>
