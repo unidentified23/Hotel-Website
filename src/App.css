@@ -501,3 +501,18 @@ color: #004830;
   font-size: large;
   color: #004830;
 }
+
+.roompopupContainer{
+  background-color: #ACE1AF;
+  width: 43.8%;
+  height: 700px;
+  position: fixed;
+  left: 27.6%;
+  bottom: 114px;
+  border: 2px solid #004830;
+  color: #004830;
+  font-size: medium;
+  text-align: center;
+  z-index: 9999; 
+
+}

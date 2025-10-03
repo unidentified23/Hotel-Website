@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import room1 from "./images/Dbed.jpg";
 import room2 from "./images/luxbed.jpg";
 import room3 from "./images/Dbed.jpg";
@@ -9,7 +9,12 @@ import tv from "./images/TV.png";
 import dbed from "./images/single bed.png";
 import sbed from  "./images/double bed.png"
 
-function rooms() {
+function Rooms() {
+  const [showpopup, setShowpopup]= useState(false);
+
+  const openPopup = () => setShowpopup(true);
+   const closePopup = () => setShowpopup(false);
+   
 
   const rooms = [
     {id: 1, name: "luxury suite", picture:room1, price: "R1700pn"  },
@@ -33,7 +38,7 @@ function rooms() {
      
       <div className='rjk'>
     {rooms.map((room, id)=>(
-      <div key={room.id} className='roomContainer'  >
+      <div key={room.id} className='roomContainer' onClick={openPopup}  >
         <p className='roomName' >{room.name}</p>
         <img src={room.picture} alt={room.name} className='roomPic' />
         <p className='roomPrice' >{room.price}</p>-
@@ -47,9 +52,15 @@ function rooms() {
     ))}
 
     </div>
+
+    {showpopup&&(
+      <div className="roompopupContainer">
+        <p onClick={closePopup} >X</p>
+      </div>
+    )}
     <div className='otherRow' >
                {otherrooms.map((room, id)=>(
-      <div key={room.id} className='otherRoomContainer'  >
+      <div key={room.id} className='otherRoomContainer' onClick={openPopup}  >
         <p className='oroomName' >{room.name}</p>
         <img src={room.picture} alt={room.name} className='oroomPic' />
         <p className='oroomPrice' >{room.price}</p>-
@@ -72,4 +83,4 @@ function rooms() {
 };
 
 
-export default rooms;
+export default Rooms;
