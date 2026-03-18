@@ -1,0 +1,51 @@
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: 400px;
+  width: 500px;
+
+}
+.inputContainer input{
+  height: 20px;
+   border: none;
+  border-bottom: 3px solid #004830;
+  background-color: #ACE1AF;
+  font-size: large;
+  color: #004830;
+}
+
+.signinBtn{
+  width: 100px;
+  position: relative;
+  left: 350px;
+
+}
+
+.signinBtn:hover{
+  background-color: #ACE1AF;
+  border: 3px solid #004830;
+  color: #004830;
+
+}
+
+.FPassLink{
+  position:relative;
+  bottom: 60px;
+  left: 20px;
+  font-size: medium;
+  color: #004830;
+  width: fit-content;
+}
+
+.FPassLink:hover{
+  color: white;
+}
+
+.HotelLogo {
+  position: relative;
+  bottom: 800px;
+  left: 100px;
+  width: 300px;
+}

@@ -1,12 +1,12 @@
 import "./App.css";
 import { Routes, Route,useLocation } from "react-router-dom";
-import Home from "./Home";
-import Navbar from "./navbar";
-import Rooms from "./rooms";
-import Facilities from "./facilities";
-import BottomNavbar from "./bottomNavbar";
-import Signin from "./signin";
-import Signup from "./signup";
+import Home from "./Home/Home";
+import Navbar from "./components/navbar/navbar";
+import Rooms from "./Rooms/rooms";
+import Facilities from "./Facilities/facilities";
+import BottomNavbar from "./components/BotomNav/bottomNavbar";
+import Signin from "./Signin/signin";
+import Signup from "./Signup/signup";
 import Forgotpass from "./forgotpass";
 import Admin from "./admin";
 

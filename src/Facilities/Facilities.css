@@ -1,0 +1,70 @@
+.faci-Content{
+  width: 100vw;
+  background-color: #A52A2A;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 ;
+
+}
+
+.faci-H1{
+  color: #004830;
+  text-align: center;
+  font-family: "Imperial Script", "cursive";
+  position: relative;
+
+}
+
+.faci-container{
+ background-color: #ACE1AF;
+  width: 90%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  
+
+}
+
+.faciContainer{
+  box-shadow: 5px 5px 5px 5px #004830;
+  border: #004830;
+  width: 70%;
+  height: 50vh;
+  margin: 8% auto;
+  border-radius: 10px;
+
+}
+
+.facilitiieName{
+  width: 100%;
+  height: 100%;
+}
+
+.nameContainer{
+  background-color: #ACE1AF;
+  width: 40%;
+  height: fit-content;
+  position: relative;
+  bottom: 90px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px 5px #004830;
+  border: #004830;
+
+}
+
+.FacilitieName{
+text-align: center;
+color: #004830;
+margin-bottom: 1%;
+
+}
+
+.description{
+  font-size: 20px;
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+  color: #004830;
+}

@@ -1,0 +1,92 @@
+.Rooms-Content{
+  width: 100vw;
+  background-color: #A52A2A;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 ;
+}
+
+.roomH1{
+  color: #004830;
+  text-align: center;
+  font-family: "Imperial Script", "cursive";
+  position: relative;
+  bottom: 300px;
+}
+
+.gridContainer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+  position: relative;
+  margin: 0 auto ;
+  margin-bottom: 5%;
+  width:90%;
+  background-color: tomato;
+  border: 1px solid black;
+}
+.rjk div{
+   min-width: 0;
+}
+
+.roomContainer{
+  background-color: #101312;
+  width:90%;
+  height: 90%;
+  text-align: center;
+  justify-content: center;
+  height: 90%;
+  color: #ACE1AF;
+}
+
+.Rnam-Rprice{
+  
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  width: 90%;
+  height: 10%;
+  text-align: center;
+}
+
+.Rnam-Rprice p {
+  margin: 0; 
+  padding: 5px;
+}
+
+.roomPic{
+  width: 90%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;  
+}
+
+
+.iconContainer{
+  background-color: #f30fc9;
+  width: 90%;
+  height: 13%;
+  display: flex;
+  gap: 2%;
+  margin: 6% auto;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
