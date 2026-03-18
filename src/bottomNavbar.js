@@ -6,7 +6,7 @@ import insta from "./images/insta.png"
 
 function bottomNavbar() {
   return (
-    <div className='bottomNavheader'>
+    <footer className='bottomNavheader'>
     
     <div className='AboutUs'>
       <h4>About us</h4>
@@ -44,7 +44,7 @@ function bottomNavbar() {
     </div>
     
     
-    </div>
+    </footer>
   )
 }
 

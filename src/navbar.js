@@ -13,12 +13,10 @@ function Navbar() {
   const navigate = useNavigate();
   const openPopup = () => setShowpopup(true);
   const closePopup = () => setShowpopup(false);
- 
 
   function toSignin() {
     closePopup();
     navigate("/signin");
-    console.log("Navigating to signin...");
   }
 
   useEffect(() => {
@@ -32,7 +30,7 @@ function Navbar() {
             console.log("User data:", docSnap.data());
             const userData = docSnap.data();
             setUserData(userData);
-            console.log(`user data is${userData}  `);
+            console.log("user data is ",userData  );
           } else {
             console.log("No such document!");
           }
@@ -45,19 +43,15 @@ function Navbar() {
     fetchUserData();
   }, [user]);
 
-  useEffect(() => {
-  console.log("🔄 Navbar re-render. User is:", user);
-}, [user, userData]);
-
+  useEffect(() => {}, [user, userData]);
 
   return (
     <div className="navbar">
+      <img src={logo} alt="logo" className="logo" />
       <div className="navbarContainer">
-        <Link to="/">Home</Link>
-        <Link to="/rooms">Rooms</Link>
-        <Link to="/facilities">Facilities</Link>
-
-        <img src={logo} alt="logo" className="logo" />
+        <Link className="link" to="/">Home</Link>
+        <Link className="link" to="/rooms">Rooms</Link>
+        <Link className="link" to="/facilities">Facilities</Link>
       </div>
       <div className="loginsign" onClick={openPopup}>
         m

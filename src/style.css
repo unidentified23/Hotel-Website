@@ -1,9 +1,11 @@
 .slideshow-container {
   position: relative;
-  top: 400px;
+  margin-top: 30%;
   width: 80%;
-  height: 300px;
-  margin: auto;
+  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 5px 5px 5px 5px #004830;

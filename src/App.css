@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
 
 .App {
-  background-color: #ACE1AF;
-  height: 100vh;
+  background-color: #21de13;
+  height: 100dvh;
   font-size: calc(10px + 2vmin);
   color: white;
-  display: flex;
-  flex-direction: column;
   background-size: cover;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
+  
 }
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: violet;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -20,34 +30,95 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow: hidden;
+
+}
+
+
+
+
+/* ============Navbar=========== */
+.navbarContainer{
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  position: relative;
+  left: 55%;
+  bottom: 73%;
+  width: 30%;
+
+}
+
+.link:active{
+  transform: scale(1.5);
+}
+.navbar{
+  background-color: #CD7F32;
+  width: 100%;
+  height: 10dvh;
+  position: relative;
+
+  
+}
+.logo{
+  height: 90%;
+  position: relative;
+  left: 2%;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+
 }
 .loginsign{
-  background-color:#ACE1AF;
-  width:40px;
-  border-radius: 70px;
+  background-color:#FFFFFF;
+  width:3.2%;
+  color: #CD7F32;
+  border-radius: 60%;
   position: relative;
-  bottom:25px;
-  left: 97%;
+  bottom:135%;
+  left: 95%;
+  height: 70%;
   text-align: center;
+  padding-top: 0.5%;
 }
+.loginsign:active{
+  transform: scale(1.5);
+}
+
 
 .popupContainer{
   background-color: #ACE1AF;
-  width: 10%;
-  height: 200px;
+  width: 15%;
+  height: fit-content;
   position: relative;
-  left: 89%;
-  bottom: 69px;
+  left: 100%;
+  bottom: 120%;
   border: 2px solid #004830;
   color: #004830;
   font-size: medium;
   text-align: center;
   z-index: 9999; 
+  animation-name: slideToLeft;
+  animation: slideToLeft 2s forwards;
+}
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(0); /* Start from current position */
+    }
+    to {
+        transform: translateX(-100%); /* Slide to the left */
+    }
+    
 }
 .closepopup{
   position: relative;
   bottom: 0px;
-  right: 80px;
+  right: 39%;
   background-color: #ACE1AF;
   color: #004830;
 }
@@ -57,124 +128,80 @@ body, html {
 
 }
 .signBtn{
-  position: relative;
-  top: 30px;
-  
-}
-.navbarContainer{
-  height: 40%;
-  background: #004830;
-  display: flex;
-  gap: 60px;
-  position: relative;
-  left: 65%;
-  padding-top: 0.5%;
-  width: 100%;
-}
-.navbar{
-  background-color: #004830;
-  width: 100%;
-  height: 60px;
-  position: relative;
-
-  
-}
-.logo{
-  height: 55px;
-  position: relative;
-  right: 90%;
-  bottom: 7px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #ACE1AF;
-  padding: 0 10px;
-}
-
-.HContainer{
-  width: 80%;
-  background-color: #ACE1AF;
-  height: 600px;
-  position: relative;
-  bottom: 15%;
   margin: 0 auto;
-  box-shadow: 5px 5px 5px 5px #004830;
-  border: #004830;
+  
+}
+.signBtn:active{
+  transform: scale(1.5);
 }
 
+/* ============Home=========== */
+.Home-Content{
+  width: 100%;
+  background-color: #A52A2A;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 ;
+}
+
+
+ .HContainer{
+  width: 80%;
+  background-color: #CD7F32;
+  height: 400px;
+  position: relative;
+  margin-left: auto;
+  margin-top: 4%;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px 5px #A52A2A;
+  border: #A52A2A
+}
 .himg{
   position: relative;
   left:66%;
   top: 2.5%;
   width: 33%; 
-  height:570px;
+  height:95%;
 }
 
 .hname{
   position: relative;
-  bottom: 100%;
-  left: 15%;
+  bottom: 95%;
+  left: 10%;
   font-family: "Imperial Script", cursive;
   font-size: 100px;
-  color: #004830;
+  color: #ffffff;
 }
 
 .slogan{
   position: relative;
-  bottom: 110%;
+  bottom: 90%;
   left: 15%;
-  color: #004830;
-}
-
-.searchbar{
-  width: 70%;
-  background-color: #004830;
-  height: 12%;
-  position: relative;
-  bottom: 500px;
-  left: 10%;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-
-}
-
-.selectbtn{
-  background-color: #ACE1AF;
-  height: 50%;
-  border-radius: 10px;
-  position: relative;
-  left: 10%;
-  width: 10%;
-  text-align-last: center;
+  color: #ffffff;
+  width: fit-content;
+  
 }
 
 
-.Explorebtn{
-  background-color: #ACE1AF;
-  color: #004830;
-  position: relative;
-  left: 30%;
-  height: 50%;
-  width: 10%;
-}
 
 .stars {
   font-size: 50px;
-  color: #004830;
+  color: #ffffff;
   position: relative;
   left: 25%;
-  bottom: 100%;
+  bottom: 125%;
 }
 
 .OFI{
    position: relative;
-   
-  color: #004830;
+   top: 5%;
+   color: #004830;
    text-align: center;
   
 }
+
+/* ============Facilities=========== */
 
 .facilitieIcons{
   display: flex;
@@ -211,58 +238,92 @@ body, html {
   text-align: center;
   font-weight: bold;
 }
-
-.rjk{
+/* ============Rooms=========== */
+.Rooms-Content{
+  width: 100vw;
+  background-color: #A52A2A;
+  min-height: 100%;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  flex: 1 ;
+}
+
+
+.roomH1{
+  color: #004830;
+  text-align: center;
+  font-family: "Imperial Script", "cursive";
   position: relative;
-  top: 120px;
-  margin: 0 auto;
-  width:90%;
+  bottom: 300px;
   
 }
 
-.roomContainer{
-  background-color: #004830;
-  width: 30%;
-  height: 200px;
-  text-align: center;
-  height: 340px;
-  color: #ACE1AF;
+.rjk{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
   position: relative;
-  bottom: 350px;
+  margin: 0 auto ;
+  margin-bottom: 5%;
+
+  width:90%;
+  background-color: tomato;
+  border: 1px solid black;
+  
 }
+.rjk div{
+   min-width: 0;
+}
+
+
+.roomContainer{
+  background-color: #101312;
+  width:90%;
+  height: 90%;
+  text-align: center;
+  justify-content: center;
+  height: 90%;
+  color: #ACE1AF;
+}
+
+.Rnam-Rprice{
+  
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  width: 90%;
+  height: 10%;
+  text-align: center;
+}
+
+.Rnam-Rprice p {
+  margin: 0; 
+  padding: 5px;
+}
+
 
 .roomPic{
   width: 90%;
   height: 60%;
-  position: relative;
-  bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+
   
 }
 
-.roomName{
-position: relative;
-  top: 208px;
-  right:125px;
-  
-}
-
-.roomPrice{
-position: relative;
-  bottom: 110px;
-  left: 130px;
-}
 
 .iconContainer{
-  background-color: #ACE1AF;
+  background-color: #f30fc9;
   width: 90%;
-  height: 40px;
+  height: 13%;
   display: flex;
-  gap: 20px;
-  position: relative;
-  bottom: 180px;
-  left: 15px;
+  gap: 2%;
+  margin: 6% auto;
 }
 
 .wifi{
@@ -280,23 +341,19 @@ position: relative;
 }
 
 .otherRow{
-  display: flex;
-  gap: 30px;
+  
   position: relative;
-  top: 120px;
-  margin: 2% auto;
   width:90%;
 }
 
 .otherRoomContainer{
   background-color: #004830;
-  width: 30%;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  height: 340px;
-  color: #ACE1AF;
+  color: #ea960f;
   position: relative;
-  bottom: 350px;
+  bottom: 22%;
 }
 
 .oroomName{
@@ -330,36 +387,52 @@ position: relative;
   left: 20px;
 }
 
-.roomH1
-{
-  color: #004830;
-  text-align: center;
-  font-family: "Imperial Script", "cursive";
-  position: relative;
-  bottom: 300px;
-  
-}
 .faciContainer{
   box-shadow: 5px 5px 5px 5px #004830;
   border: #004830;
   width: 70%;
-  height: 400px;
+  height: 50vh;
   margin: 5% auto;
   border-radius: 10px;
+
 }
 
-.faciheader{
-  width: 100%;
+.faci-Content{
+  width: 100vw;
+  background-color: #A52A2A;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 ;
+
+}
+
+.faci-H1{
+  color: #004830;
+  text-align: center;
+  font-family: "Imperial Script", "cursive";
+  position: relative;
+
+}
+
+.faci-container{
+ background-color: #ACE1AF;
+  width: 90%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
   
+
 }
 .facilitiieName{
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
 .nameContainer{
   background-color: #ACE1AF;
   width: 40%;
-  height: 100px;
+  height: fit-content;
   position: relative;
   bottom: 90px;
   margin: 0 auto;
@@ -371,45 +444,45 @@ position: relative;
 .FacilitieName{
 text-align: center;
 color: #004830;
+margin-bottom: 1%;
 
 }
 
 .description{
   font-size: 20px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
-  position: relative;
-  bottom: 40px;
+  padding-bottom: 3%;
   color: #004830;
 }
+/* ============BottomNavbar=========== */
 
 .bottomNavheader{
   background-color: #004830;
   width: 100%;
-  height: 300px;
+  height: 50dvh;
   position: relative;
-  top: 132%;
   display: flex;
-  gap: 60px;
+  gap: 6%;
 }
 
 .AboutUs{
-  width: 30%;
+  width: 40%;
   position: relative;
-  bottom: 30px;
-  left: 10px;
+  bottom: 3%;
+  left: 1%;
 
 }
 
 .AboutUs p{
   font-size: 20px;
   position: relative;
-  bottom: 30px;
+  bottom: 5%;
 }
 .Contacts{
   width: 20%;
   position: relative;
-  bottom: 30px;
+  bottom: 3%;
 
 }
 
@@ -505,14 +578,32 @@ color: #004830;
 .roompopupContainer{
   background-color: #ACE1AF;
   width: 43.8%;
-  height: 700px;
+  height: 77vh;
   position: fixed;
-  left: 27.6%;
-  bottom: 114px;
+  left: 26%;
   border: 2px solid #004830;
   color: #004830;
   font-size: medium;
   text-align: center;
-  z-index: 9999; 
+  z-index: 9998; 
+
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); 
+  z-index: 9997; 
+}
+
+.calendarClose{
+  position:relative;
+  left: 47%;
+  bottom: 0%;
+  color: #101312;
 
 }
