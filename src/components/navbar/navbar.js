@@ -59,23 +59,22 @@ function Navbar() {
       </div>
       {showpopup && (
         <div className="popupContainer">
-          <button onClick={closePopup} className="closepopup">
-            X
-          </button>
+      
           <div className="popupFunction">
+             <button onClick={closePopup} className="closepopup">
+            X
+             </button>
             {user ? (
               <>
                 <p>{user.email}</p>
-                <p>
-                  {userData != null
-                    ? `Hello ${userData.firstname}`
-                    : `hello guest`}
-                </p>
-
+               
+                <Link className="Bookings" to="/bookings">Bookings</Link>
                 <button className="signBtn" onClick={logout}>
                   Logout
                 </button>
+                
               </>
+              
             ) : (
               <>
                 <p>❌ Not logged in</p>

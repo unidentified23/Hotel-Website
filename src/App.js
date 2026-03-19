@@ -8,7 +8,8 @@ import BottomNavbar from "./components/BotomNav/bottomNavbar";
 import Signin from "./Signin/signin";
 import Signup from "./Signup/signup";
 import Forgotpass from "./forgotpass";
-import Admin from "./admin";
+import Bookings from "./Bookings/Bookings";
+
 
 function App() {
       const location = useLocation();
@@ -29,7 +30,7 @@ function App() {
                       <Route path="/bottomNavbar" element={<BottomNavbar />} />
                       <Route path="/signup" element={<Signup />} />
                       <Route path="/forgotpass" element={<Forgotpass />} />
-                      <Route path="/admin" element={<Admin />} />
+                      <Route path="/bookings" element={<Bookings />} />
                      
               </Routes>
       </main>
