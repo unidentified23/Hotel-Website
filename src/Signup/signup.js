@@ -14,12 +14,15 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [gender, setGender] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+     const [loading, setLoading] = useState(false);
  
 
   
 
    const navigate = useNavigate();
     const nextPage =async () => {
+      if (loading) return;
+    setLoading(true);
     try{
  const userCredential= await createUserWithEmailAndPassword(auth, email, password);
  const user = userCredential.user;
@@ -62,7 +65,9 @@ function Signup() {
             <input type='text' placeholder='gender'  value={gender}  onChange={(e) => setGender(e.target.value)} />
             <input type='tel' placeholder='Phone Number'  value={phoneNumber}  onChange={(e) => setPhoneNumber(e.target.value)} />
             
-            <button className='signinBtn' onClick={nextPage} >Register</button>
+            <button className='signinBtn' onClick={nextPage} disabled={loading}>
+              {loading ? "Registering..." : "Register"}
+            </button>
             <p className='FPassLink' onClick={SigninPage} >Already registered? </p>
             <img  src={Logo} alt='logo' className="HotelLogo"   />
         </div>

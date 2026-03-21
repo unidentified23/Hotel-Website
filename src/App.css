@@ -54,32 +54,7 @@ body, html {
   top: 100px;
 
 }
-.facilitieIcon{
-   width: 40%;
-  background-color: #ACE1AF;
-  height: 60%;
-  position: relative;
-  left: 30%;
-  top: 10%;
-  
-  
-}
 
-.imageContainer{
-  width: 70%;
-  height: 200px;
-  box-shadow: 5px 5px 5px 5px #004830;
-  border: #004830;
-  background-color: #ACE1AF;
-  margin: 0 auto;
-}
-
-.iconName{
-  color: #004830;
-  font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-}
 /* ============Rooms=========== */
 
 

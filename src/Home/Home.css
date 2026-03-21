@@ -1,6 +1,6 @@
 .Home-Content{
   width: 100%;
-  background-color: #A52A2A;
+  background-color: #ffffff;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -10,14 +10,13 @@
 
  .HContainer{
   width: 80%;
-  background-color: #CD7F32;
+  background-color: #f8f8ff;
   height: 400px;
   position: relative;
   margin-left: auto;
   margin-top: 4%;
   margin-right: auto;
-  box-shadow: 5px 5px 5px 5px #A52A2A;
-  border: #A52A2A
+  box-shadow: 5px 5px 5px 5px #aaaaaa;
 }
 .himg{
   position: relative;
@@ -33,14 +32,14 @@
   left: 10%;
   font-family: "Imperial Script", cursive;
   font-size: 100px;
-  color: #ffffff;
+  color: #CD7F32;
 }
 
 .slogan{
   position: relative;
   bottom: 90%;
   left: 15%;
-  color: #ffffff;
+  color: #CD7F32;
   width: fit-content;
   
 }
@@ -49,7 +48,7 @@
 
 .stars {
   font-size: 50px;
-  color: #ffffff;
+  color: gold;
   position: relative;
   left: 25%;
   bottom: 125%;
@@ -58,8 +57,33 @@
 .OFI{
    position: relative;
    top: 5%;
-   color: #004830;
+   color: #CD7F32;
    text-align: center;
   
 }
 
+.facilitieIcon{
+   width: 50%;
+  background-color: #f8f8ff;
+  height: 60%;
+  position: relative;
+  left: 26%;
+  top: 10%;
+  
+  
+}
+
+.imageContainer{
+  width: 80%;
+  height: 200px;
+  box-shadow: 5px 5px 5px 5px #aaaaaa;
+  background-color: #f8f8ff;
+  margin: 0 auto;
+}
+
+.iconName{
+  color: #CD7F32;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}

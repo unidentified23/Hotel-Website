@@ -99,10 +99,13 @@ function Bookings() {
     <div className="BookingContent">
         <h1>Bookings</h1>
         <div>
-              {bookedDates.map((date, index) => (
-                 <p key={index}>{date.date}</p>
-              ))};
-                    
+          {bookedDates.length > 0 ? (
+            bookedDates.map((date, index) => (
+              <p key={index}>{date.date}</p>
+            ))
+          ) : (
+            <p>No bookings found.</p>
+          )}
         </div>
    
 

@@ -17,7 +17,7 @@
 }
 
 .signinBtn{
-  width: 100px;
+  width: fit-content;
   position: relative;
   left: 350px;
 

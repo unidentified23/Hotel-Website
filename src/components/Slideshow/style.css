@@ -8,9 +8,9 @@
   margin-bottom: 5%;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 5px 5px 5px 5px #004830;
+  box-shadow: 5px 5px 5px 5px #aaaaaa;
   border: #004830;
-  background-color: #ACE1AF;
+  background-color: #f8f8ff;
   display: flex;
    
 }
@@ -32,21 +32,21 @@
 }
 
 button {
-  background: #004830;
+  background: #ffffff;
   border: none;
   padding: 10px 15px;
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
-  color: #ACE1AF;
+  color: #CD7F32;
   transition: 0.3s;
   position: relative;
-  right: 1.3%;
+  right: 1.2%;
 }
 
 button:hover {
-  background: #ACE1AF;
-  color: #004830;
+  background: #CD7F32;
+  color: #ffffff;
 }
 
 

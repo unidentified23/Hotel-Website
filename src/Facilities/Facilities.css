@@ -1,6 +1,6 @@
 .faci-Content{
   width: 100vw;
-  background-color: #A52A2A;
+  background-color: #ffffff;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 .faci-H1{
-  color: #004830;
+  color: #CD7F32;
   text-align: center;
   font-family: "Imperial Script", "cursive";
   position: relative;
@@ -17,7 +17,7 @@
 }
 
 .faci-container{
- background-color: #ACE1AF;
+ background-color: #fff;
   width: 90%;
   height: fit-content;
   margin-left: auto;
@@ -28,8 +28,7 @@
 }
 
 .faciContainer{
-  box-shadow: 5px 5px 5px 5px #004830;
-  border: #004830;
+  box-shadow: 5px 5px 5px 5px #aaaaaa;
   width: 70%;
   height: 50vh;
   margin: 8% auto;
@@ -43,20 +42,19 @@
 }
 
 .nameContainer{
-  background-color: #ACE1AF;
+  background-color: #CD7F32;
   width: 40%;
   height: fit-content;
   position: relative;
   bottom: 90px;
   margin: 0 auto;
-  box-shadow: 5px 5px 5px 5px #004830;
-  border: #004830;
+  box-shadow: 5px 5px 5px 5px #aaaaaa;
 
 }
 
 .FacilitieName{
 text-align: center;
-color: #004830;
+color: #ffffff;
 margin-bottom: 1%;
 
 }
@@ -66,5 +64,5 @@ margin-bottom: 1%;
   width: 95%;
   margin: 0 auto;
   padding-bottom: 3%;
-  color: #004830;
+  color: #ffffff;
 }
