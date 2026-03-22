@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
 
 .App {
-  background-color: #21de13;
+  background-color: #ffffff;
   height: 100dvh;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -99,35 +99,3 @@ body, html {
   color: #004830;
 }
 
-.roompopupContainer{
-  background-color: #ACE1AF;
-  width: 43.8%;
-  height: 77vh;
-  position: fixed;
-  left: 26%;
-  border: 2px solid #004830;
-  color: #004830;
-  font-size: medium;
-  text-align: center;
-  z-index: 9998; 
-
-}
-
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px); 
-  z-index: 9997; 
-}
-
-.calendarClose{
-  position:relative;
-  left: 47%;
-  bottom: 0%;
-  color: #101312;
-
-}

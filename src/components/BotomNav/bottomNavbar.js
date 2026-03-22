@@ -1,7 +1,7 @@
-import phone from "../../images/output-onlinepngtools(4).png";
-import whatsapp from "../../images/output-onlinepngtools(3).png";
-import mail from "../../images/output-onlinepngtools.png";
-import insta from "../../images/insta.png";
+import phone from "../../images/Phone.png";
+import whatsapp from "../../images/whatsapp.png";
+import mail from "../../images/mail.png";
+import insta from "../../images/instagram.png";
 import "./BottomNav.css"
 
 function bottomNavbar() {

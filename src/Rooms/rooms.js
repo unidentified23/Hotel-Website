@@ -7,8 +7,8 @@ import wifi from "../images/wifi.png";
 import roomServ from "../images/room service.png";
 import tv from "../images/TV.png";
 import dbed from "../images/single bed.png";
-import sbed from "../images/double bed.png";
-import Calendar from "../calendar";
+import sbed from "../images/doble bed.png";
+import Calendar from "../components/Calendar/calendar";
 import { AuthContext } from "../authcontext";
 import { Link } from "react-router-dom";
 import "./Room.css";
@@ -123,9 +123,10 @@ function Rooms() {
           {isLoggedin ? (
             <Calendar roomDetails={selectedRoom} />
           ) : (
-            <p>
-              Please <Link to="/signin">log in</Link> to book a suite
-            </p>
+                <div className="loginPromptContainer" >
+                  <p>Please log in to book this room.</p>
+                  <Link className="loginPrompt" to="/signin">log in</Link>
+                </div>
           )}
         </div>
         </>

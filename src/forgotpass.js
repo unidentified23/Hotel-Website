@@ -1,4 +1,4 @@
-import Logo from "./images/hotellogo.png";
+import Logo from "./images/hotel-logo.png";
 
 function forgotpass() {
   return (

@@ -7,8 +7,9 @@ import {
   where,
   onSnapshot,
 } from "firebase/firestore";
-import { db } from "./firebaseconfig";
-import { useAuth } from "./authcontext";
+import { db } from "../../firebaseconfig";
+import { useAuth } from "../../authcontext";
+import "./Calendar.css";
 
 
 function Calendar({ roomDetails }) {
@@ -130,8 +131,8 @@ function Calendar({ roomDetails }) {
   }, [roomId]);   //this dependency array ensures that the useEffect runs again if the roomId changes
 
   return (
-    <div style={styles.container}>
-      <div style={styles.header}>
+    <div className="container">
+      <div className="header">
         <button onClick={prevMonth}>←</button>    {/*takes user to the previous month*/}
         <h2>
           {monthNames[month]} {year}        {/*Displays month name and year*/}
@@ -139,19 +140,19 @@ function Calendar({ roomDetails }) {
         <button onClick={nextMonth}>→</button>    {/*takes user to the next month*/}
       </div>
 
-      <div style={styles.weekdays}>
+      <div className="weekdays">
         {/*displays names of weekdays*/}
         {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (  
-          <div key={day} style={styles.weekday}>
+          <div key={day} className="weekday">
             {day}
           </div>
         ))}
       </div>
 
-      <div style={styles.days}>
+      <div className="days">
         {/*Dispalys empty cells for days before the first day of the month*/}
         {Array(firstDay).fill(null).map((_, i) => (
-            <div key={`empty-${i}`} style={styles.day}></div> //creates an empty array with length firstDay:
+            <div key={`empty-${i}`} className="day"></div> //creates an empty array with length firstDay:
           ))};
 
         {daysArray.map((day) => {//displays each day of the month
@@ -173,10 +174,7 @@ function Calendar({ roomDetails }) {
             //thse divs represent each day on the calendar. The background color changes based on whether the date is booked or not. If the date is not booked
             // clicking on it will trigger the bookFunction to open the booking popup for that date.
             <div key={day}
-              style={{
-                ...styles.day,
-                backgroundColor: isBooked ? "#FF6B6B" : "#51CF66",
-              }}
+               className={`day ${isBooked ? "booked" : "available"}`}
               onClick={() => !isBooked && bookFunction(day)}
             >
               {day}
@@ -186,7 +184,7 @@ function Calendar({ roomDetails }) {
 
       </div>
       {showpopup && (
-        <div style={styles.BookpopupContainer}>
+        <div className="BookpopupContainer">
           <p onClick={closePopup}>X</p>
           <button onClick={() => saveUserDate(selectedDate, roomN)}>
             Book
@@ -198,50 +196,5 @@ function Calendar({ roomDetails }) {
     </div>
   );
 }
-
-const styles = {
-  container: {
-    width: "320px",
-    margin: " auto",
-    border: "1px solid #ccc",
-    borderRadius: "10px",
-    padding: "10px",
-    textAlign: "center",
-    backgroundColor: "#f8f9fa",
-  },
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: "10px",
-  },
-  weekdays: {
-    display: "grid",
-    gridTemplateColumns: "repeat(7, 1fr)",
-    fontWeight: "bold",
-  },
-  weekday: {
-    padding: "5px 0",
-  },
-  days: {
-    display: "grid",
-    gridTemplateColumns: "repeat(7, 1fr)",
-    gap: "5px",
-  },
-  day: {
-    padding: "10px",
-    backgroundColor: "white",
-    borderRadius: "5px",
-    boxShadow: "0 0 2px rgba(0,0,0,0.1)",
-  },
-  BookpopupContainer: {
-    width: "50%",
-    height: "30%",
-    position: "absolute",
-    bottom: "40%",
-    right: "25%",
-    backgroundColor: "rgb(172,225,175)",
-  },
-};
 
 export default Calendar;

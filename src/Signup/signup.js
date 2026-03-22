@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { auth, db } from "../firebaseconfig";
 import {  createUserWithEmailAndPassword } from "firebase/auth";
-import Logo from "../images/hotellogo.png";
+import Logo from "../images/hotel-logo.png";
 import { useNavigate } from "react-router-dom";
 import {  doc, setDoc } from "firebase/firestore";
 import "./Signup.css";

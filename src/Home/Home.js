@@ -1,10 +1,10 @@
 import Slideshow from "../components/Slideshow/slideshow";
 import hpic from "../images/front.jpg";
 import resturant from "../images/resturant.png";
-import parking from "../images/parcking.png";
-import swimming from "../images/swimming.png";
+import parking from "../images/parking.png";
+import swimming from "../images/swimming-pool.png";
 import wifi from "../images/wifi.png";
-import gym from "../images/output-onlinepngtools(2).png";
+import gym from "../images/gym.png";
 import roomServ from "../images/room service.png";
 import "./Home.css";
 

@@ -1,4 +1,4 @@
-import Logo from "../images/hotellogo.png";
+import Logo from "../images/hotel-logo.png";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState} from "react";
@@ -66,10 +66,10 @@ function Signin() {
           {loading ? "Signing in..." : "Sign in"}
         </button>
         <p className="FPassLink" onClick={ForgotPass}>
-          Forgot password?{" "}
+          Forgot password?
         </p>
         <p className="newAccLink" onClick={SignupPage}>
-          Don't have an account?{" "}
+          Don't have an account?
         </p>
         <img src={Logo} alt="logo" className="HotelLogoSignin " />
       </div>
