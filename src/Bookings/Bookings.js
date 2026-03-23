@@ -18,6 +18,7 @@ function Bookings() {
      const [bookedDates, setBookedDates] = useState([]);
      const [isLoading, setIsLoading] = useState(true);
      const { user } = useAuth();
+     const [bookedRooms, setBookedRooms] = useState([]);
      const Email = user ? user.email : null;
      console.log("user emailll is ", Email);
 
@@ -59,6 +60,7 @@ function Bookings() {
     },
     ];
 
+    const allRooms=[...rooms, ...otherrooms];
 
 
         // This useEffect sets up a real-time listener to the Firestore database to fetch all bookings for the current user.
@@ -78,7 +80,7 @@ function Bookings() {
             const dates = querySnapshot.docs.map((doc) => { 
               const data = doc.data();  //Gets the actual data object from the Firestore document
               return {                 //Returns a simplified object for each document
-                room: data.roomId,    //Store the roomID from the document
+                roomID: data.roomId,    //Store the roomID from the document
                 date: data.date? data.date.toDate().toDateString(): "Missing Date",  // If a date exists? Convert Firestore Timestamp → JavaScript Date → readable string:If no date exists, return "Missing Date" as a fallback
               };
             });
@@ -94,14 +96,35 @@ function Bookings() {
           },
         );
         return () => unsubscribe(); // CLEANUP: This stops the listener when the user leaves the page
-  }, [Email]);   
+  }, [Email]);  
+  
+  useEffect(() => {
+    const results = bookedDates.map(b => {
+    const room = allRooms.find(r => r.id === b.roomID);
+    if (room) {
+      return { ...room, date: b.date }; // attach the date
+    }
+    return null; // if no room found
+  })
+  .filter(Boolean); // remove nulls
+   setBookedRooms(results);
+  console.log("booked rooms with dates: ", results);  
+  },[bookedDates]);  
   return (
     <div className="BookingContent">
         <h1>Bookings</h1>
         <div>
           {bookedDates.length > 0 ? (
-            bookedDates.map((date, index) => (
-              <p key={index}>{date.date}</p>
+            bookedRooms.map((room, index) => (
+            
+              <div key={index} className="bookedRoom">
+                <div className="roomDetails">
+                   <img src={room.picture} alt={room.name} className="roomPic" />
+                   <p >{room.date}</p>
+                   <p>{room.name}</p>
+                </div>
+                
+              </div>
             ))
           ) : (
             <p>No bookings found.</p>

@@ -55,11 +55,19 @@
 }
 
 .OFI{
-   position: relative;
-   top: 5%;
+  margin: 7% auto 0 auto;
    color: #CD7F32;
    text-align: center;
   
+}
+
+.facilitieIcons{
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  margin: 5% auto;
+ 
+
 }
 
 .facilitieIcon{
@@ -87,3 +95,10 @@
   text-align: center;
   font-weight: bold;
 }
+
+.EventsNPromo{
+  color: #CD7F32;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5%;
+  }

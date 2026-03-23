@@ -1,4 +1,4 @@
-import Logo from "../images/hotel-logo.png";
+import Logo from "../images/Hotel logo.png";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState} from "react";
@@ -11,7 +11,8 @@ function Signin() {
    const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
-  const nextPage = async () => {
+  const nextPage = async (e) => {
+    e.preventDefault();
      if (loading) return;
     setLoading(true);
     try {
@@ -49,20 +50,22 @@ function Signin() {
 
   return (
     <div className="signinbody">
-      <div className="inputContainer">
+      <form className="inputContainer" onSubmit={nextPage}>
         <input
           type="text"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required disabled={loading}
         />
         <input
-          type="Password"
+          type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required disabled={loading}
         />
-        <button className="signinBtn" onClick={nextPage} disabled={loading}>
+        <button type="submit" className="signinBtn" disabled={loading}>
           {loading ? "Signing in..." : "Sign in"}
         </button>
         <p className="FPassLink" onClick={ForgotPass}>
@@ -72,7 +75,7 @@ function Signin() {
           Don't have an account?
         </p>
         <img src={Logo} alt="logo" className="HotelLogoSignin " />
-      </div>
+      </form>
     </div>
   );
 }

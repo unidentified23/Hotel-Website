@@ -3,3 +3,10 @@
     min-height: 50dvh;
     background-color: aqua;
 }
+.bookedRoom{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+

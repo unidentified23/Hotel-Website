@@ -28,10 +28,10 @@ function Navbar() {
           const docSnap = await getDoc(docRef);
 
           if (docSnap.exists()) {
-            console.log("User data:", docSnap.data());
+
             const userData = docSnap.data();
             setUserData(userData);
-            console.log("user data is ",userData  );
+           
           } else {
             console.log("No such document!");
           }
@@ -44,7 +44,7 @@ function Navbar() {
     fetchUserData();
   }, [user]);
 
-  useEffect(() => {}, [user, userData]);
+ 
 
   return (
     <div className="navbar">

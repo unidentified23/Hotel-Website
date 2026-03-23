@@ -49,7 +49,7 @@ function Home() {
           <p className="iconName">Room service</p>
         </span>
       </div>
-
+        <h2 className="EventsNPromo">Events and Promotions</h2>
        <Slideshow />
     </div>
   );

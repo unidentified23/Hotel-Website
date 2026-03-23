@@ -10,10 +10,10 @@
 .inputContainer input{
   height: 20px;
    border: none;
-  border-bottom: 3px solid #004830;
-  background-color: #ACE1AF;
+  background-color: #ffffff;
+  border-bottom: 3px solid #CD7F32;
   font-size: large;
-  color: #004830;
+  color: #CD7F32;
 }
 
 .signinBtn{
@@ -24,9 +24,8 @@
 }
 
 .signinBtn:hover{
-  background-color: #ACE1AF;
-  border: 3px solid #004830;
-  color: #004830;
+  background-color: #CD7F32;
+  color: #ffffff;
 
 }
 
@@ -35,12 +34,12 @@
   bottom: 60px;
   left: 20px;
   font-size: medium;
-  color: #004830;
+  color: #CD7F32;
   width: fit-content;
 }
 
 .FPassLink:hover{
-  color: white;
+  color: #aaaaaa;
 }
 
 .HotelLogo {

@@ -1,6 +1,6 @@
 .slideshow-container {
   position: relative;
-  margin-top: 30%;
+  margin-top: 4%;
   width: 80%;
   height: 50vh;
   margin-left: auto;
@@ -41,7 +41,7 @@ button {
   color: #CD7F32;
   transition: 0.3s;
   position: relative;
-  right: 1.2%;
+  right: 2%;
 }
 
 button:hover {
