@@ -35,9 +35,8 @@
 
 }
 .loginsign{
-  background-color:#FFFFFF;
+  background-color:#CD7F32;
   width:3.2%;
-  color: #CD7F32;
   border-radius: 60%;
   position: relative;
   bottom:135%;
@@ -48,6 +47,11 @@
 }
 .loginsign:active{
   transform: scale(1.5);
+}
+
+.menubutton{
+  width: 80%;
+  height: 100%;
 }
 
 

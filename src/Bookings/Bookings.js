@@ -99,6 +99,7 @@ function Bookings() {
   }, [Email]);  
   
   useEffect(() => {
+    
     const results = bookedDates.map(b => {
     const room = allRooms.find(r => r.id === b.roomID);
     if (room) {
@@ -108,21 +109,28 @@ function Bookings() {
   })
   .filter(Boolean); // remove nulls
    setBookedRooms(results);
+    
   console.log("booked rooms with dates: ", results);  
   },[bookedDates]);  
   return (
     <div className="BookingContent">
-        <h1>Bookings</h1>
-        <div>
+        <h1 className="H1-Bookings">Bookings</h1>
+        {isLoading ? (
+           <div className="bookedRoomsContainer">
+
+    {[1, 2, 3, 4].map((n) => <div key={n} className="skeleton-card" />)}
+  </div>
+        ) : (
+                  <div className="bookedRoomsContainer">
           {bookedDates.length > 0 ? (
             bookedRooms.map((room, index) => (
             
               <div key={index} className="bookedRoom">
-                <div className="roomDetails">
+               
                    <img src={room.picture} alt={room.name} className="roomPic" />
                    <p >{room.date}</p>
                    <p>{room.name}</p>
-                </div>
+               
                 
               </div>
             ))
@@ -130,6 +138,8 @@ function Bookings() {
             <p>No bookings found.</p>
           )}
         </div>
+        )}
+
    
 
     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../images/hotel-logo.png";
+import menu from "../../images/menu.png";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../authcontext";
 import { useNavigate } from "react-router-dom";
@@ -54,8 +55,8 @@ function Navbar() {
         <Link className="link" to="/rooms">Rooms</Link>
         <Link className="link" to="/facilities">Facilities</Link>
       </div>
-      <div className="loginsign" onClick={openPopup}>
-        m
+      <div className="loginsign" onClick={openPopup} require >
+        <img src={menu} alt="Menu" className="menubutton" />
       </div>
       {showpopup && (
         <div className="popupContainer">
