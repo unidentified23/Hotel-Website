@@ -32,12 +32,12 @@ function bottomNavbar() {
            <td>076 391 3499</td>
         </tr>
         <tr>
-          <td> <img src={mail} alt='mailicon' width={30}  /> </td>
-          <td>spaceparadise@zmail.com</td>
-        </tr>
-        <tr>
           <td> <img src={insta} alt='mailicon' width={30}  /> </td>
           <td>Space_Paradise</td>
+        </tr>
+        <tr>
+          <td> <img src={mail} alt='mailicon' width={30}  /> </td>
+          <td>spaceparadise@zmail.com</td>
         </tr>
       </table>
     

@@ -9,26 +9,66 @@
 
 .AboutUs{
   width: 40%;
-  position: relative;
-  bottom: 3%;
-  left: 1%;
 
 }
 
 .AboutUs p{
   font-size: 20px;
-  position: relative;
-  bottom: 5%;
+  
 }
 .Contacts{
   width: 20%;
-  position: relative;
-  bottom: 3%;
+
 
 }
 
 .Contacts p{
   font-size: 20px;
-  position: relative;
-  bottom: 30px;
+
+}
+
+/*======Mobile Styles======*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .bottomNavheader{
+    height: fit-content;
+    width: 100%;
+    gap: 3%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-bottom: 5%;
+
+  }
+  .AboutUs{
+    width: 90%;
+    font-size: 6vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .AboutUs p{
+  font-size: 4vw;
+  
+}
+  
+  .Contacts{
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto; 
+    width:fit-content;
+    
+  }
+   .Contacts h4{
+    text-align: center;
+      }
+  .contactTab{
+    margin: 0 auto;
+  }
+  .contactTab tr{
+     display: flex;
+  justify-content: center;
+
+  }
+
 }

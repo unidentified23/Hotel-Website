@@ -31,7 +31,7 @@
   box-shadow: 5px 5px 5px 5px #aaaaaa;
   width: 70%;
   height: 50vh;
-  margin: 8% auto;
+  margin: 5% auto;
 
 }
 
@@ -64,4 +64,31 @@ margin-bottom: 1%;
   margin: 0 auto;
   padding-bottom: 3%;
   color: #ffffff;
+}
+
+/*======Mobile Styles======*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .faci-Content{
+    width: 100vw;
+    background-color: #ffffff;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 ;
+} 
+ .faci-container{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  padding-bottom: 10%;
+ }
+ .faciContainer{
+  width: 90% ;
+ }
+ .nameContainer{
+  width: 90% ;
+ }
+
 }
