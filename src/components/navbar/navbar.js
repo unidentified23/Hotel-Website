@@ -59,6 +59,7 @@ function Navbar() {
         <img src={menu} alt="Menu" className="menubutton" />
       </div>
       {showpopup && (
+                  <div className="popup-overlay" onClick={closePopup}>
         <div className="popupContainer">
       
           <div className="popupFunction">
@@ -85,6 +86,7 @@ function Navbar() {
               </>
             )}
           </div>
+        </div>
         </div>
       )}
     </div>

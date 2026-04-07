@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 100dvh;
     background-color: #ffffff;
-    padding-bottom: 14dvh;
+    padding-bottom: 60px;
     
 }
 html,body{
@@ -34,7 +34,7 @@ html,body{
 
 .bookedRoom p{
 
-  font-size: small;
+  font-size: large;
   margin: 0 auto;
   width: fit-content;
 
@@ -48,7 +48,7 @@ html,body{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  gap: 2%; 
+  gap: 16px; 
   width: 95%;
   margin-left: auto;
   margin-right: auto;
@@ -78,10 +78,10 @@ html,body{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  gap: 2%; 
+  gap: 16px; 
   height: fit-content;
   }
   .BookingContent{
-   padding-bottom: 14dvh;
+   padding-bottom: 50px;
   }
 }
