@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   flex: 1 ;
+  padding-bottom: 10%;
 }
 
 
@@ -108,48 +109,73 @@
   .Home-Content{
     width: 100%;
     background-color: #ffffff;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     flex: 1 ; 
   }
+  body{
+    margin: 0;
+    height: 100% ;
+
+  }
   
   .HContainer{
     width: 75%;
-    height: 300px;
+    height: 250px;
     margin: 5% auto;
 
-
-  
   }
+
 .himg {
 
-  height: fit-content;
-  width: 50%;
-  object-fit: contain;
-  position:relative;
-  left: 48%;
-
-
-
-}
+  
+  display: block;
+  float: left;
+    }
   .hname{
-    font-size: 50px;
-    bottom: 105%;
-    left: 5%;
-    width: 30%;
+    font-size: 40px;
+    bottom: 90%;
+    left: 10%;
+    width: 42%;
+
   }
   .stars{
+  
     position: relative;
-    left: 7%;
+    width: fit-content;
+    left: 10%;
     font-size: xx-large;
     bottom: 135%;
   }
   .slogan{
-    bottom: 90%;
-    left: 5%;
+    
+    bottom: 80%;
+    left: 10%;
     font-size: large;
     width: 45%;
     
   } 
+  .facilitieIcons{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+  } 
+  
+  .imageContainer{
+    width: 90%;
+    height: 120px;
+    margin: 0 auto;
+  }
+  .facilitieIcon{
+    width: 40%;
+    height: 40%;
+    display:flex;
+    align-items: center;
+    position: relative;
+    left: 30%;
+    
+  }
 }

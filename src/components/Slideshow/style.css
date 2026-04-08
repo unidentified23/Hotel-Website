@@ -49,6 +49,23 @@ button:hover {
   color: #ffffff;
 }
 
+  /*==========mobile styles==========*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .slideshow-container {
+    width: 90%;
+    height: 30vh;
+
+  }
+  .buttons{
+    justify-content: space-between;
+    
+  }
+  .buttons button{
+    font-size: medium;
+    position: relative;
+    right: 6%;
+  }
 
 
+}
 

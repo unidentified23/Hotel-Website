@@ -49,7 +49,7 @@ function Signin() {
   };
 
   return (
-    <div className="signinbody">
+    <div className="signin-Content">
       <form className="inputContainer" onSubmit={nextPage}>
         <input
           type="text"
