@@ -12,26 +12,39 @@ body{
     height: 100% ;  
   }
 
-.inputContainer{
+.input-Container{
+    margin-top: 3%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
+  gap: 5%;
+  width: 40%;
 
 }
-.inputContainer input{
-  height: 20px;
-   border: none;
+.input-Container input{
+  margin: 0 auto;
+  border: none;
   border-bottom: 3px solid #CD7F32;
-  background-color: #f8f8ff;
+  background-color: #ffffff;
   font-size: large;
   color: #CD7F32;
+  width: 80%;
+}
+.input-Container input:focus{
+    border: none;
+    outline: none;
+     border-bottom: 3px solid #CD7F32;
+  }
+
+.Fpass-n-Signin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 2% auto;
 }
 
 .signinBtn{
-  width: 100px;
-  position: relative;
-  left: 350px;
+  width: fit-content;
   background-color: #f8f8ff;
   color: #CD7F32;
   box-shadow: 5px 5px 5px 5px #aaaaaa;
@@ -41,41 +54,38 @@ body{
 .signinBtn:hover{
   background-color: #CD7F32;
   color: #f8f8ff;
-
+  transform: scale(1.5);
 }
 
-.FPassLink{
-  position:relative;
-  bottom: 60px;
-  left: 20px;
+.FPass-Link{
   font-size: medium;
   color: #CD7F32;
   width: fit-content;
 }
 
-.FPassLink:hover{
+.FPass-Link:hover{
   color: #aaaaaa;
+  background-color: transparent;
+  transform: scale(1.5);
 }
 
-.newAccLink{
-    position:relative;
-  bottom: 80px;
-  left: 160px;
+.newAcc-Link{
+  margin: 0 auto;
   font-size: medium;
   color: #CD7F32;
   width: fit-content;
 }
 
-.newAccLink:hover{
+.newAcc-Link:hover{
   color: #aaaaaa;
+  background-color: transparent;
+  transform: scale(1.5);
+
 }
 
 .HotelLogoSignin {
-
-  position: relative;
-  bottom: 670px;
-  left: 100px;
-  width: 300px;
+  width: 20%;
+  margin-top: 5%;
 }
 
   /*==========mobile styles==========*/
@@ -87,17 +97,75 @@ body{
     display: flex;
     flex: 1 ; 
     align-items: center;
+    justify-content: center;
   }
-  .inputContainer{
-    background-color: aqua;
-    width: 50vw;
-    margin: 0 auto;
+  .input-Container{
+    width: 80%;
+    margin: 5% auto;
   }
-  .inputContainer input{
-    background-color: black;
+  .input-Container input{
     font-size: medium;
-    width: 80vw;
-    color: blueviolet;
+    width: 80%;
+    color: #CD7F32;
   }
+  .input-Container input:focus{
+    border: none;
+    outline: none;
+     border-bottom: 3px solid #CD7F32;
+  }
+  .Fpass-n-Signin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 4% auto;
+}
+
+.signinBtn{
+  width: fit-content;
+  background-color: #f8f8ff;
+  color: #CD7F32;
+  box-shadow: 5px 5px 5px 5px #aaaaaa;
+
+}
+
+.signinBtn:active{
+  background-color: #CD7F32;
+  color: #f8f8ff;
+  transform: scale(1.5);
+
+}
+
+.FPass-Link{
+  font-size: medium;
+  color: #CD7F32;
+  width: fit-content;
+  background-color: transparent;
+}
+
+.FPass-Link:active{
+  color: #aaaaaa;
+  background-color: transparent;
+  transform: scale(1.5);
+}
+
+.newAcc-Link{
+  margin: 0 auto;
+  font-size:medium;
+  color: #CD7F32;
+  width: fit-content;
+  background-color: transparent;
+}
+
+.newAcc-Link:active{
+  color: #aaaaaa;
+  background-color: transparent;
+  transform: scale(1.5);
+}
+
+.HotelLogoSignin {
+  width: 40%;
+
+}
 
 }

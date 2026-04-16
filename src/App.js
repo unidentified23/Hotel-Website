@@ -7,7 +7,7 @@ import Facilities from "./Facilities/facilities";
 import BottomNavbar from "./components/BotomNav/bottomNavbar";
 import Signin from "./Signin/signin";
 import Signup from "./Signup/signup";
-import Forgotpass from "./forgotpass";
+import Forgotpass from "./forgotpass/forgotpass";
 import Bookings from "./Bookings/Bookings";
 
 

@@ -121,7 +121,7 @@
   }
   
   .HContainer{
-    width: 75%;
+    width: 90%;
     height: 250px;
     margin: 5% auto;
 
@@ -132,6 +132,7 @@
   
   display: block;
   float: left;
+  
     }
   .hname{
     font-size: 40px;

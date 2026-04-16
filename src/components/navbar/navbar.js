@@ -55,9 +55,9 @@ function Navbar() {
         <Link className="link" to="/rooms">Rooms</Link>
         <Link className="link" to="/facilities">Facilities</Link>
       </div>
-      <div className="loginsign" onClick={openPopup} require >
+      <button className="loginsign" onClick={openPopup} require >
         <img src={menu} alt="Menu" className="menubutton" />
-      </div>
+      </button>
       {showpopup && (
                   <div className="popup-overlay" onClick={closePopup}>
         <div className="popupContainer">

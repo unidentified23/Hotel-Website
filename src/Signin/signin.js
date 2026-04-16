@@ -50,7 +50,8 @@ function Signin() {
 
   return (
     <div className="signin-Content">
-      <form className="inputContainer" onSubmit={nextPage}>
+        <img src={Logo} alt="logo" className="HotelLogoSignin " />
+      <form className="input-Container" onSubmit={nextPage}>
         <input
           type="text"
           placeholder="Email"
@@ -65,16 +66,19 @@ function Signin() {
           onChange={(e) => setPassword(e.target.value)}
           required disabled={loading}
         />
-        <button type="submit" className="signinBtn" disabled={loading}>
+        <div className="Fpass-n-Signin" >
+          <button className="FPass-Link" onClick={ForgotPass}>
+          Forgot password?
+        </button>
+            <button type="submit" className="signinBtn" disabled={loading}>
           {loading ? "Signing in..." : "Sign in"}
         </button>
-        <p className="FPassLink" onClick={ForgotPass}>
-          Forgot password?
-        </p>
-        <p className="newAccLink" onClick={SignupPage}>
+        </div>
+        
+        <button className="newAcc-Link" onClick={SignupPage}>
           Don't have an account?
-        </p>
-        <img src={Logo} alt="logo" className="HotelLogoSignin " />
+        </button>
+      
       </form>
     </div>
   );

@@ -1,0 +1,14 @@
+.forgotpass-Content{
+    width: 100vw;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1 ; 
+    align-items: center;
+    justify-content: center;
+}
+body{
+    margin: 0;
+    height: 100% ;  
+  }

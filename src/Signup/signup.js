@@ -51,7 +51,8 @@ function Signup() {
   };
 
   return (
-    <div>
+    <div className="signup-Content">
+       <img src={Logo} alt="logo" className="Hotel-Logo" />
       <form className="inputContainer" onSubmit={nextPage}>
         <input
           type="text"
@@ -108,14 +109,16 @@ function Signup() {
           required
           disabled={loading}
         />
-
-        <button type="submit" className="signinBtn" disabled={loading}>
-          {loading ? "Registering..." : "Register"}
-        </button>
-        <p className="FPassLink" onClick={SigninPage}>
-          Already registered?{" "}
-        </p>
-        <img src={Logo} alt="logo" className="HotelLogo" />
+        <div className="Regbtn-n-reglink">
+           <button className="Signin-link" onClick={SigninPage}>
+            Already registered?{" "}
+           </button>
+           <button type="submit" className="Reg-Btn" disabled={loading}>
+           {loading ? "Registering..." : "Register"}
+           </button>
+       
+        </div>
+  
       </form>
     </div>
   );

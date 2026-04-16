@@ -1,50 +1,168 @@
+.signup-Content{
+    width: 100vw;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1 ; 
+    align-items: center;
+}
+body{
+    margin: 0;
+    height: 100% ;  
+  }
+
 .inputContainer{
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: relative;
-  top: 400px;
-  width: 500px;
+  gap: 5%;
+  margin: 5% auto;
+  padding-bottom: 5%;
+  width: 40%;
+ 
 
 }
 .inputContainer input{
-  height: 20px;
+  width: 80%;
+  margin: 0 auto;
    border: none;
   background-color: #ffffff;
   border-bottom: 3px solid #CD7F32;
   font-size: large;
   color: #CD7F32;
 }
+.inputContainer input:focus{
+    border: none;
+    outline: none;
+     border-bottom: 3px solid #CD7F32;
+  }
 
-.signinBtn{
+.Regbtn-n-reglink{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.Reg-Btn{
   width: fit-content;
-  position: relative;
-  left: 350px;
+  background-color: #f8f8ff;
+  color: #CD7F32;
+  box-shadow: 5px 5px 5px 5px #aaaaaa;
+
 
 }
 
-.signinBtn:hover{
+.Reg-Btn:hover{
   background-color: #CD7F32;
   color: #ffffff;
+  transform: scale(1.5);
 
 }
 
-.FPassLink{
-  position:relative;
-  bottom: 60px;
-  left: 20px;
+.Signin-link{
   font-size: medium;
   color: #CD7F32;
   width: fit-content;
 }
 
-.FPassLink:hover{
+.Signin-link:hover{
   color: #aaaaaa;
+  background-color: transparent;
+  transform: scale(1.5);
+
 }
 
-.HotelLogo {
-  position: relative;
-  bottom: 800px;
-  left: 100px;
-  width: 300px;
+.Hotel-Logo {
+  margin-top: 5%;
+  width: 20%;
+}
+
+
+  /*==========mobile styles==========*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .signup-Content{
+    width: 100vw;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1 ; 
+    align-items: center;
+    justify-content: center;
+}
+body{
+    margin: 0;
+    height: 100% ;  
+  }
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  margin: 5% auto;
+  padding-bottom: 5%;
+  width: 80%;
+ 
+
+}
+.inputContainer input{
+  width: 80%;
+  margin: 0 auto;
+   border: none;
+  background-color: #ffffff;
+  border-bottom: 3px solid #CD7F32;
+  font-size: medium;
+  color: #CD7F32;
+}
+.inputContainer input:focus{
+    border: none;
+    outline: none;
+     border-bottom: 3px solid #CD7F32;
+  }
+
+.Regbtn-n-reglink{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.Reg-Btn{
+  width: fit-content;
+  background-color: #f8f8ff;
+  color: #CD7F32;
+  box-shadow: 5px 5px 5px 5px #aaaaaa;
+  font-size: medium;
+
+
+}
+
+.Reg-Btn:active{
+  background-color: #CD7F32;
+  color: #ffffff;
+  transform: scale(1.5);
+
+}
+
+.Signin-link{
+  font-size: medium;
+  color: #CD7F32;
+  width: fit-content;
+}
+
+.Signin-link:active{
+  color: #aaaaaa;
+  background-color: transparent;
+  transform: scale(1.5);
+
+}
+
+.Hotel-Logo {
+  width: 40%;
+}
+
 }
