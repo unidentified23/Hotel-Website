@@ -8,7 +8,8 @@ import "./Signin.css";
 function Signin() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-   const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
   const nextPage = async (e) => {
@@ -59,13 +60,18 @@ function Signin() {
           onChange={(e) => setEmail(e.target.value)}
           required disabled={loading}
         />
-        <input
-          type="password"
+        <div className="Password-Container">
+          <input
+          type={showPassword ? "text" : "password"}
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required disabled={loading}
-        />
+          />
+          <button onClick={() => setShowPassword(!showPassword)} className="password-btn">
+            {showPassword ? "Hide" : "Show"}
+          </button>
+        </div>
         <div className="Fpass-n-Signin" >
           <button className="FPass-Link" onClick={ForgotPass}>
           Forgot password?

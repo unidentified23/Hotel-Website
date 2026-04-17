@@ -37,6 +37,27 @@ body{
      border-bottom: 3px solid #CD7F32;
   }
 
+.password-Container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.pass-btn {
+  background-color: transparent;
+  border: none;
+  color: #CD7F32;
+  font-size: medium;
+  cursor: pointer;
+  }
+
+.pass-btn:hover {
+  color: #aaaaaa;
+  transform: scale(1.5);
+  background-color: transparent;
+}
+
 .Regbtn-n-reglink{
   display: flex;
   flex-direction: row;
@@ -122,6 +143,24 @@ body{
     outline: none;
      border-bottom: 3px solid #CD7F32;
   }
+  .password-Container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.pass-btn {
+  background-color: transparent;
+  border: none;
+  color: #CD7F32;
+  font-size: small;
+  }
+
+.pass-btn:active {
+  color: #aaaaaa;
+  background-color: transparent;
+}
 
 .Regbtn-n-reglink{
   display: flex;

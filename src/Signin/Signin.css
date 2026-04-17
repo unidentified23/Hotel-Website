@@ -102,6 +102,8 @@ body{
   .input-Container{
     width: 80%;
     margin: 5% auto;
+    display: flex;
+    align-items: center;
   }
   .input-Container input{
     font-size: medium;
@@ -113,6 +115,30 @@ body{
     outline: none;
      border-bottom: 3px solid #CD7F32;
   }
+
+  .Password-Container{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    width: 80%;
+    align-items: center;
+   }
+  
+
+   .password-btn{
+    background-color: transparent;
+    color: #CD7F32;
+    border: none;
+    font-size: medium;
+    background-color: tomato;
+    }
+
+    .Password-btn:hover{
+     color: #aaaaaa;
+     background-color: transparent;
+     transform: scale(1.5);
+     }
+
   .Fpass-n-Signin{
   display: flex;
   flex-direction: row;

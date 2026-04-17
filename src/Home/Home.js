@@ -12,12 +12,14 @@ function Home() {
   return (
     <div className="Home-Content">
       <div className="HContainer">
-        <img src={hpic} alt="pich" className="himg" />
-        <h1 className="hname">Space Paradise</h1>
-        <p className="slogan">Your comfort is our number one priority</p>
-        <div class="stars">
-          <span>★★★★★</span>
+        <div className="text-Container">
+          <h1 className="hotel-name">Space Paradise</h1>
+              <span class="stars">★★★★★</span>
+          <p className="slogan">Your comfort is our number one priority</p>
         </div>
+
+                <img src={hpic} alt="pich" className="himg" />
+
       </div>
       <h2 className="OFI"> Our facilities include </h2>
       <div className="facilitieIcons">

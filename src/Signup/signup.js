@@ -15,6 +15,7 @@ function Signup() {
   const [gender, setGender] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
   const nextPage = async (e) => {
@@ -78,14 +79,20 @@ function Signup() {
           required
           disabled={loading}
         />
-        <input
-          type="password"
+        <div className="password-Container">
+          <input
+          type={showPassword ? "text" : "password"}
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
           disabled={loading}
-        />
+        /> 
+        <button onClick={() => setShowPassword(!showPassword)} className="pass-btn">
+        {showPassword ? "Hide" : "Show"}
+      </button>
+        </div>
+        
         <input
           type="email"
           placeholder="Email"
