@@ -1,10 +1,12 @@
-import Logo from "../images/hotel-logo.png";
+import Logo from "../images/Hotel logo.png";
 import { useState } from "react";
 import "./forgotpass.css";
+import { useNavigate } from "react-router-dom";
 
 function Forgotpass() {
   const [Email, setEmail] = useState("");
-     const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const submitEmail = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -14,14 +16,18 @@ function Forgotpass() {
       "If an account with that email exists, a password reset link has been sent.",
     );
   };
+  const toLoginPage= () => {
+    navigate("/signin")
+  }
   return (
     <div className="forgotpass-Content">
-      <div className="inputContainer">
-        <p className="intruction">
+      <div className="forgotpass-Container">
+       <img src={Logo} alt="logo" className="HotelLogoSignin " />
+
+        <p className="instruction">
           An email with reset link will be sent to your email entered below{" "}
         </p>
-        <img src={Logo} alt="logo" className="HotelLogoSignin " />
-        <form className="input-Container" onSubmit={submitEmail}>
+        <form className="forgotpass-input-Container" onSubmit={submitEmail}>
            <input
             type="email"
             placeholder="Enter Email"
@@ -30,7 +36,11 @@ function Forgotpass() {
             required
             disabled={loading}
           />
-          <button className="signinBtn">Submit</button>
+          <div className="signin-n-sendLink">
+            <button type="button" className="signin-page" onClick={toLoginPage}>Login page</button>
+            <button className="sendLink-Btn">Submit</button>
+          </div>
+          
         </form>
       </div>
     </div>

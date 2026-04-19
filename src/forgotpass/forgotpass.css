@@ -7,8 +7,68 @@
     flex: 1 ; 
     align-items: center;
     justify-content: center;
+    font-size: large;
 }
 body{
     margin: 0;
     height: 100% ;  
+  }
+
+.forgotpass-Container{
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  margin: 5% auto;
+  padding-bottom: 5%;
+  width: 80%;
+  align-items: center;
+  color: #CD7F32;
+  width: 50%;
+}
+.forgotpass-input-Container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50%;
+}
+
+.forgotpass-input-Container input{
+    font-size: large;
+    width: 100%;
+    color: #CD7F32;
+    border-bottom: 3px solid #CD7F32;
+    border: none;
+  }
+  .forgotpass-input-Container input:focus{
+    border: none;
+    outline: none;
+     border-bottom: 3px solid #CD7F32;
+  }
+ 
+  .signin-n-sendLink{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .signin-page{
+    background-color: transparent;
+    font-size: large;
+  }
+  .signin-page:hover{
+    transform: scale(1.5);
+    color:#aaaaaa;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .sendLink-Btn{
+    width: fit-content;
+    background-color: #f8f8ff;
+    box-shadow: 5px 5px 5px 5px #aaaaaa;
+  }
+
+  .sendLink-Btn:hover{
+    background-color: #CD7F32;
+    color: #ffffff;
+    transform: scale(1.5);
   }

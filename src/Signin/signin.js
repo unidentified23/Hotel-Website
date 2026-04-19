@@ -1,9 +1,11 @@
 import Logo from "../images/Hotel logo.png";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useState} from "react";
+import { useState } from "react";
 import { auth } from "../firebaseconfig";
 import "./Signin.css";
+import ShowIcon from "../images/show.png";
+import HideIcon from "../images/Hide.png";
 
 function Signin() {
   const [password, setPassword] = useState("");
@@ -14,13 +16,13 @@ function Signin() {
   const navigate = useNavigate();
   const nextPage = async (e) => {
     e.preventDefault();
-     if (loading) return;
+    if (loading) return;
     setLoading(true);
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
 
       const user = userCredential.user;
@@ -38,9 +40,8 @@ function Signin() {
         alert("Login error: " + errorCode + " - " + errorMessage);
       }
     } finally {
-  
-    setLoading(false); 
-  }
+      setLoading(false);
+    }
   };
   const SignupPage = () => {
     navigate("/signup");
@@ -51,40 +52,49 @@ function Signin() {
 
   return (
     <div className="signin-Content">
-        <img src={Logo} alt="logo" className="HotelLogoSignin " />
+      <img src={Logo} alt="logo" className="HotelLogoSignin " />
       <form className="input-Container" onSubmit={nextPage}>
         <input
           type="text"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required disabled={loading}
+          required
+          disabled={loading}
         />
         <div className="Password-Container">
           <input
-          type={showPassword ? "text" : "password"}
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required disabled={loading}
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            disabled={loading}
           />
-          <button onClick={() => setShowPassword(!showPassword)} className="password-btn">
-            {showPassword ? "Hide" : "Show"}
+          <button
+            onClick={() => setShowPassword(!showPassword)}
+            className="password-btn"
+            type="button"
+          >
+            {showPassword ? (
+              <img src={HideIcon} alt="Hide" className="hideicon" />
+            ) : (
+              <img src={ShowIcon} alt="Show" className="Showicon" />
+            )}
           </button>
         </div>
-        <div className="Fpass-n-Signin" >
+        <div className="Fpass-n-Signin">
           <button className="FPass-Link" onClick={ForgotPass}>
-          Forgot password?
-        </button>
-            <button type="submit" className="signinBtn" disabled={loading}>
-          {loading ? "Signing in..." : "Sign in"}
-        </button>
+            Forgot password?
+          </button>
+          <button type="submit" className="signinBtn" disabled={loading}>
+            {loading ? "Signing in..." : "Sign in"}
+          </button>
         </div>
-        
+
         <button className="newAcc-Link" onClick={SignupPage}>
           Don't have an account?
         </button>
-      
       </form>
     </div>
   );

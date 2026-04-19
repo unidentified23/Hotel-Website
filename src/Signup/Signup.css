@@ -41,7 +41,7 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 .pass-btn {
@@ -50,6 +50,8 @@ body{
   color: #CD7F32;
   font-size: medium;
   cursor: pointer;
+  height: fit-content;
+  
   }
 
 .pass-btn:hover {
@@ -155,11 +157,6 @@ body{
   border: none;
   color: #CD7F32;
   font-size: small;
-  }
-
-.pass-btn:active {
-  color: #aaaaaa;
-  background-color: transparent;
 }
 
 .Regbtn-n-reglink{

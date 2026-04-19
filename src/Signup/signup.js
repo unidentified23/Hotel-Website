@@ -5,6 +5,8 @@ import Logo from "../images/Hotel logo.png";
 import { useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore";
 import "./Signup.css";
+import ShowIcon from "../images/show.png";
+import HideIcon from "../images/Hide.png";
 
 function Signup() {
   const [firstname, setFirstname] = useState("");
@@ -53,7 +55,7 @@ function Signup() {
 
   return (
     <div className="signup-Content">
-       <img src={Logo} alt="logo" className="Hotel-Logo" />
+      <img src={Logo} alt="logo" className="Hotel-Logo" />
       <form className="inputContainer" onSubmit={nextPage}>
         <input
           type="text"
@@ -81,18 +83,26 @@ function Signup() {
         />
         <div className="password-Container">
           <input
-          type={showPassword ? "text" : "password"}
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          disabled={loading}
-        /> 
-        <button onClick={() => setShowPassword(!showPassword)} className="pass-btn">
-        {showPassword ? "Hide" : "Show"}
-      </button>
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            disabled={loading}
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="pass-btn"
+          >
+            {showPassword ? (
+              <img src={HideIcon} alt="Hide" className="hideicon" />
+            ) : (
+              <img src={ShowIcon} alt="Show" className="Showicon" />
+            )}
+          </button>
         </div>
-        
+
         <input
           type="email"
           placeholder="Email"
@@ -112,20 +122,18 @@ function Signup() {
           type="tel"
           placeholder="Phone Number"
           value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value) } 
+          onChange={(e) => setPhoneNumber(e.target.value)}
           required
           disabled={loading}
         />
         <div className="Regbtn-n-reglink">
-           <button className="Signin-link" onClick={SigninPage}>
+          <button className="Signin-link" onClick={SigninPage}>
             Already registered?{" "}
-           </button>
-           <button type="submit" className="Reg-Btn" disabled={loading}>
-           {loading ? "Registering..." : "Register"}
-           </button>
-       
+          </button>
+          <button type="submit" className="Reg-Btn" disabled={loading}>
+            {loading ? "Registering..." : "Register"}
+          </button>
         </div>
-  
       </form>
     </div>
   );
