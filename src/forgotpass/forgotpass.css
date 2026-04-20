@@ -20,7 +20,6 @@ body{
   gap: 5%;
   margin: 5% auto;
   padding-bottom: 5%;
-  width: 80%;
   align-items: center;
   color: #CD7F32;
   width: 50%;
@@ -36,13 +35,13 @@ body{
     font-size: large;
     width: 100%;
     color: #CD7F32;
-    border-bottom: 3px solid #CD7F32;
     border: none;
+    border-bottom: 3px solid #CD7F32;
   }
   .forgotpass-input-Container input:focus{
     border: none;
     outline: none;
-     border-bottom: 3px solid #CD7F32;
+    border-bottom: 3px solid #CD7F32;
   }
  
   .signin-n-sendLink{
@@ -72,3 +71,87 @@ body{
     color: #ffffff;
     transform: scale(1.5);
   }
+
+    /*==========mobile styles==========*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .forgotpass-Content{
+    width: 100vw;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1 ; 
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+  }
+  body{
+    margin: 0;
+    height: 100% ;  
+  }
+
+.forgotpass-Container{
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  margin: 5% auto;
+  padding-bottom: 5%;
+  align-items: center;
+  color: #CD7F32;
+  width: 90%;
+  
+}
+.forgotpass-input-Container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 50%;
+    margin-top: 5%;
+  
+}
+
+.forgotpass-input-Container input{
+    font-size: medium;
+    width: 100%;
+    color: #CD7F32;
+    border: none;
+    border-bottom: 3px solid #CD7F32;
+  }
+  .forgotpass-input-Container input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #CD7F32;
+  }
+ 
+  .signin-n-sendLink{
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+  }
+
+  .signin-page{
+    background-color: transparent;
+    font-size: medium ;
+  }
+  .signin-page:active{
+    transform: scale(1.5);
+    color:#aaaaaa;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .sendLink-Btn{
+    width: fit-content;
+    background-color: #f8f8ff;
+    box-shadow: 5px 5px 5px 5px #aaaaaa;
+  }
+
+  .sendLink-Btn:active{
+    background-color: #CD7F32;
+    color: #ffffff;
+    transform: scale(1.5);
+  }
+
+
+}

@@ -91,7 +91,7 @@ function Calendar({ roomDetails }) {
       alert("bookin confirmed "); // Alerts the user that the booking was successful
       closePopup(); //closes the booking popup after successful booking
     } catch (error) {
-      console.error(" Error adding date:", error); // Logs any errors that occur during the booking process to the console
+     // Logs any errors that occur during the booking process to the console
       alert("Failed to book. Please try again."); // Alerts the user that the booking failed
     }
   }
@@ -122,7 +122,6 @@ function Calendar({ roomDetails }) {
         setIsLoading(false);      // Set loading to false since data has been successfully fetched
       },  // This is the error callback for the onSnapshot listener,It runs if something goes wrong while listening to Firestore
       (error) => {
-        console.error("Listener failed:", error);  // Log the error to the console for debugging
         setIsLoading(false);     // Stop the loading state even if there was an error, so the UI doesn’t stay stuck in a loading state
       },
     );
@@ -155,7 +154,9 @@ function Calendar({ roomDetails }) {
             <div key={`empty-${i}`} className="day"></div> //creates an empty array with length firstDay:
           ))};
 
-        {daysArray.map((day) => {//displays each day of the month
+          {isLoading? (
+            Array(35-firstDay).fill(null).map((_,i)=>( <div key={`empty-${i}`} className="day-loading"></div> ))
+          ) : (daysArray.map((day) => {//displays each day of the month
 
           const dateObj = new Date(year, month, day);   //creates a Date object for the current day
           const dateString = dateObj.toDateString();     //converts the Date object to a readable string format, which will be used to compare with booked dates
@@ -180,7 +181,10 @@ function Calendar({ roomDetails }) {
               {day}
             </div>
           );
-        })};
+        })
+        )}
+
+
 
       </div>
       {showpopup && (

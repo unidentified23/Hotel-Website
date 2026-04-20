@@ -44,9 +44,8 @@ function Signup() {
       alert("user registerd succesfully");
       navigate("/");
     } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert("Signup error:" + errorCode + " " + errorMessage);
+      
+      alert("Failed to register, please try again");
     }
   };
   const SigninPage = () => {
@@ -89,6 +88,8 @@ function Signup() {
             onChange={(e) => setPassword(e.target.value)}
             required
             disabled={loading}
+            minLength="8"
+            maxLength="30"
           />
           <button
             type="button"

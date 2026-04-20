@@ -32,6 +32,19 @@
     border-radius: 5px;
     box-shadow: 0 0 2px rgba(0,0,0,0.1);
   }
+    .day-loading {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.1);
+    background: #eee;
+    background: linear-gradient(110deg, black 8%, #ffffff 18%, #aaaaaa 33%);
+    background-size: 200% 100%;
+    animation: loadingShandies 2.5s linear infinite;
+  }
+
+  @keyframes loadingShandies {
+  to { background-position-x: -200%; }
+}
 
   .day.booked {
   background-color: #CD7F32;

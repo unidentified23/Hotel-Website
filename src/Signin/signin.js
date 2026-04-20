@@ -70,6 +70,8 @@ function Signin() {
             onChange={(e) => setPassword(e.target.value)}
             required
             disabled={loading}
+            minLength="8"
+            maxLength="20"
           />
           <button
             onClick={() => setShowPassword(!showPassword)}

@@ -91,7 +91,7 @@ function Bookings() {
       console.log("booked dates are ", dates);
     },  // This is the error callback for the onSnapshot listener,It runs if something goes wrong while listening to Firestore
       (error) => {
-        console.error("Listener failed:", error);  // Log the error to the console for debugging
+
         setIsLoading(false);     // Stop the loading state even if there was an error, so the UI doesn’t stay stuck in a loading state
       },
     );
