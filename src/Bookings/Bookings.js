@@ -20,7 +20,6 @@ function Bookings() {
   const { user } = useAuth();
   const [bookedRooms, setBookedRooms] = useState([]);
   const Email = user ? user.email : null;
-  console.log("user emailll is ", Email);
 
   const rooms = [
     { id: 1, name: "luxury suite", picture: room1, price: "R1700pn" },
@@ -88,7 +87,6 @@ function Bookings() {
       // This will trigger a re-render so the UI reflects the latest bookings
       setBookedDates(dates);
       setIsLoading(false);      // Set loading to false since data has been successfully fetched
-      console.log("booked dates are ", dates);
     },  // This is the error callback for the onSnapshot listener,It runs if something goes wrong while listening to Firestore
       (error) => {
 
@@ -118,7 +116,9 @@ function Bookings() {
       {isLoading ? (
         <div className="bookedRoomsContainer">
 
-          {[1, 2, 3, 4].map((n) => <div key={n} className="skeleton-card" />)}
+          {Array(8).fill(null).map((_,n) => (<div key={n} className="skeleton-card">
+          </div>
+        ))}
         </div>
       ) : (
         <div className="bookedRoomsContainer">

@@ -31,13 +31,12 @@ function Signin() {
       navigate("/");
     } catch (error) {
       const errorCode = error.code;
-      const errorMessage = error.message;
       if (errorCode === "auth/invalid-credential") {
         alert("Incorrect password.");
       } else if (errorCode === "auth/invalid-email") {
         alert("No account found with this email.");
       } else {
-        alert("Login error: " + errorCode + " - " + errorMessage);
+        alert("Something went wrong please try again");
       }
     } finally {
       setLoading(false);

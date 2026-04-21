@@ -34,10 +34,12 @@ function Navbar() {
             setUserData(userData);
            
           } else {
-            console.log("No such document!");
+        
+            alert("your account doesn't exist")
           }
         } catch (err) {
-          console.error("Error fetching user data:", err);
+          alert("something went wrong please try logging in again");
+          
         }
       }
     };
