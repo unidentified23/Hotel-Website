@@ -27,17 +27,15 @@ function Forgotpass() {
 
     sendPasswordResetEmail(auth, Email)
       .then(() => {
-        // Password reset email sent!
-
         setCountdown(60);
         alert(
           "If an account with that email exists, a password reset link has been sent.",
-        );
-        console.log("Check your inbox.");
+        );      // Password reset email sent!
+      
       })
       .catch((error) => {
 
-        alert("Something went wrong please try again");
+        alert("Something went wrong please try again"); // Handle errors here (e.g., invalid email format, network issues)
       })
       .finally(() => {
         // This runs NO MATTER WHAT (success or failure)
@@ -45,7 +43,7 @@ function Forgotpass() {
       });
   };
   const toLoginPage = () => {
-    navigate("/signin");
+    navigate("/signin");  // Navigates to the Signin page
   };
   return (
     <div className="forgotpass-Content">

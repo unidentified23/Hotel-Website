@@ -16,37 +16,37 @@ function Signin() {
   const navigate = useNavigate();
   const nextPage = async (e) => {
     e.preventDefault();
-    if (loading) return;
+    if (loading) return;    // Prevents multiple submissions while loading
     setLoading(true);
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
         password,
-      );
+      );// Attempt to sign in the user with the provided email and password
 
-      const user = userCredential.user;
+      const user = userCredential.user;  // Get the signed-in user from the userCredential object
       alert(`  Login successful
          Welcome, ${user.email}`);
       navigate("/");
     } catch (error) {
       const errorCode = error.code;
-      if (errorCode === "auth/invalid-credential") {
+      if (errorCode === "auth/invalid-credential") {    // Handle invalid credentials error (e.g., incorrect password)
         alert("Incorrect password.");
-      } else if (errorCode === "auth/invalid-email") {
-        alert("No account found with this email.");
-      } else {
-        alert("Something went wrong please try again");
+        } else if (errorCode === "auth/invalid-email") {  // Handle invalid email format error
+          alert("No account found with this email.");
+        } else {
+        alert("Something went wrong please try again");// Handle other errors (e.g., network issues)
       }
     } finally {
       setLoading(false);
     }
   };
   const SignupPage = () => {
-    navigate("/signup");
+    navigate("/signup");  // Navigates to the Signup page
   };
   const ForgotPass = () => {
-    navigate("/forgotpass");
+    navigate("/forgotpass");    // Navigates to the Forgot Password page
   };
 
   return (
@@ -70,7 +70,7 @@ function Signin() {
             required
             disabled={loading}
             minLength="8"
-            maxLength="20"
+            maxLength="60"
           />
           <button
             onClick={() => setShowPassword(!showPassword)}

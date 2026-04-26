@@ -40,24 +40,54 @@ body{
 .password-Container{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 90%;
   margin: 0 auto;
 }
+
+.password-Container input{
+    border: none;
+    border-bottom: 3px solid #CD7F32;
+    background-color: #ffffff;
+    font-size: large;
+    color: #CD7F32;
+    width: 81%;
+    margin-left: 5%;
+    }
 .pass-btn {
   background-color: transparent;
   border: none;
+  border-bottom: 3px solid #CD7F32;
   color: #CD7F32;
-  font-size: medium;
-  cursor: pointer;
-  height: fit-content;
+  font-size: large;
+  border-radius: 0;
+  margin-right: 2.7%;
+  height: 26px;
+  padding: 0 2.7%;
   
   }
 
 .pass-btn:hover {
   color: #aaaaaa;
-  transform: scale(1.5);
+  cursor: pointer;
   background-color: transparent;
+
+}
+.password-popup{
+  position: absolute;
+  height:3%;
+  width: fit-content;
+  background-color: blue;
+  color: red;
+  z-index: 9999;
+  margin-top: 1%;
+  margin-left: 10%;
+  font-size: small;
+   display: flex;
+  align-items: center;
+
+}
+.password-n-popup-container{
+  position: relative;
 }
 
 .Regbtn-n-reglink{
@@ -73,6 +103,7 @@ body{
   background-color: #f8f8ff;
   color: #CD7F32;
   box-shadow: 5px 5px 5px 5px #aaaaaa;
+  font-size: large;
 
 
 }
@@ -85,7 +116,7 @@ body{
 }
 
 .Signin-link{
-  font-size: medium;
+  font-size: large;
   color: #CD7F32;
   width: fit-content;
 }
@@ -148,15 +179,46 @@ body{
   .password-Container{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
+
+.password-Container input{
+    border: none;
+    border-bottom: 3px solid #CD7F32;
+    background-color: #ffffff;
+    font-size: medium;
+    color: #CD7F32;
+    width: 76.5%;
+    margin-left: 4.5%;
+
+    }
+
 .pass-btn {
   background-color: transparent;
   border: none;
   color: #CD7F32;
+  font-size: medium;
+  border-bottom: 3px solid #CD7F32;
+  
+  
+}
+.password-popup{
+  position: absolute;
+  height:3%;
+  width: fit-content;
+  background-color: #ffffff;
+  color: red;
+  z-index: 9999;
+  margin-top: 2%;
+  margin-left: 9%;
   font-size: small;
+  display: flex;
+  align-items: center;
+
+}
+.password-n-popup-container{
+  position: relative;
 }
 
 .Regbtn-n-reglink{
